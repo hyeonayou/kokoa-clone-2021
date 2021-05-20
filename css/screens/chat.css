@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 110vh;
 }
 
 #chat-screen .alt-header,
@@ -22,5 +22,97 @@
 }
 
 .main-chat {
-  margin-top: 150px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 11px;
+  font-size: 18px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.mmessage__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/* bubble <-> time 순서 변경 */
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+}
+
+.reply .reply__column: :first-child {
+  width: 10%;
+}
+
+.reply .reply__column: :last-child {
+  width: 90%;
+}
+
+.reply input {
+  height: 30px;
+  width: 100%;
 }
